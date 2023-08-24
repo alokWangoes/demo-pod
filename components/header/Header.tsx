@@ -8,7 +8,7 @@ type HeaderProps = {
   open: boolean
   language: string
   val: string
-  languageImage: { EN: string; NL: string; FR: string; DE: string }
+  languageImage: any
   icon: {
     src: string
     alt: string
@@ -37,7 +37,7 @@ const iconsData: HeaderProps["icon"] = [
     alt: "twitter-icon",
   },
 ]
-const Header = ({ isNav }) => {
+const Header = ({ isNav }: any) => {
   const [open, setOpen] = useState<HeaderProps["open"]>(false)
   const [language, setLanguage] = useState<HeaderProps["language"]>("EN")
 
@@ -65,7 +65,7 @@ const Header = ({ isNav }) => {
               </div>
               <div className="flag-wrp">
                 <img
-                  src={languageImages[language] || languageImages.EN}
+                  src={languageImages[language]  || languageImages.EN } 
                   alt="flag"
                 />
                 <h4
