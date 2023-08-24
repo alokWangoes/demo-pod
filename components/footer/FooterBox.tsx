@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { newsLetterSchema } from "./validator"
 type footerProps = {
-  email: string
+  email: any
   icon: {
     src: string
     alt: string
