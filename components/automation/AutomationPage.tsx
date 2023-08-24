@@ -26,6 +26,7 @@ import DeleteIcon from "../../public/automation-icons/delete.svg"
 import MyProfileIcon from "../../public/automation-icons/my-profile-Icon.svg"
 import MySubscriptionIcon from "../../public/automation-icons/my-subscription-icon.svg"
 import MySettingIcon from "../../public/automation-icons/my-settings-icon.svg"
+import SearchIcon from "../../public/searchicon.svg"
 
 import { newsLetterSchema } from "./validator"
 type AutomationPageProps = {
@@ -385,7 +386,7 @@ const AutomationPage = () => {
       {openProfileOption && (
         <div className="automation-profile-section">
           {profileOptionData &&
-            profileOptionData.map((item : any ) => {
+            profileOptionData.map((item: any) => {
               return (
                 <div className={item.class} key={item.id}>
                   <span className="automation-profile-icon">{item.icon}</span>
@@ -410,12 +411,11 @@ const AutomationPage = () => {
                       {...register("search")}
                       placeholder="Search"
                     />
-                    <img
+                    <SearchIcon
                       className="search-icon"
-                      src="/searchIcon.svg"
-                      alt=""
                       onClick={handleSubmit(sendEmail)}
                     />
+                    {/* <img className="search-icon" src="/searchIcon.svg" alt="" /> */}
                   </span>
                 </form>
               </div>
@@ -427,7 +427,7 @@ const AutomationPage = () => {
               <h3 className="automation-inner-text roboto">Automation</h3>
               <div className="automation-box-icons">
                 {automationBoxData &&
-                  automationBoxData.map((item : any ) => {
+                  automationBoxData.map((item: any) => {
                     return (
                       <div className="automaton-box-icon-wrp" key={item.id}>
                         <span className="automation-box-icon">{item.src}</span>
@@ -466,7 +466,7 @@ const AutomationPage = () => {
           {openOrderSelector && (
             <div className="workflow_order_option_wrp">
               {orderField &&
-                orderField.map((item : any ) => {
+                orderField.map((item: any) => {
                   return (
                     <span className="workflow_order_option" key={item.id}>
                       {item.text}
@@ -478,7 +478,7 @@ const AutomationPage = () => {
           {openValSelector && (
             <div className="workflow-range-option-wrp">
               {rangeValue &&
-                rangeValue.map((item : any ) => {
+                rangeValue.map((item: any) => {
                   return (
                     <div className="workflow-range-option" key={item.id}>
                       <p className="workflow-range-option-text">{item.value}</p>
@@ -489,7 +489,7 @@ const AutomationPage = () => {
           )}
 
           {automationContentBoxData &&
-            automationContentBoxData.map((item : any ) => {
+            automationContentBoxData.map((item: any) => {
               return (
                 <div className="workflow-content-wrapper row ">
                   <div className="col-md-6">
@@ -547,7 +547,7 @@ const AutomationPage = () => {
                     <div className="workflow-content-acton-dropdown">
                       <div className="workflow-content-action-dropdown-box"></div>
                       {actionDropdownData &&
-                        actionDropdownData.map((item : any) => {
+                        actionDropdownData.map((item: any) => {
                           return (
                             <div
                               className="workflow-content-action-dropdown-inner-content"

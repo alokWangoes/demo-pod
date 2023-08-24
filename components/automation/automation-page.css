@@ -31,13 +31,37 @@
 .automation-header-faq {
     cursor: pointer;
     margin: 0px 10px 0px 0px;
-
+    
 }
+.automation-header-faq :hover {
+    background: rgba(130, 123, 169, 0.80);
+    border-radius: 35px;
+     
+}
+
+.automation-header-faq:hover svg path {
+    background: rgba(130, 123, 169, 1);
+    border-radius: 35px;
+    fill: white;
+}
+
 
 .automation-header-notification {
     cursor: pointer;
     margin: 0px 10px 0px 20px;
 }
+.automation-header-notification :hover {
+    background: rgba(130, 123, 169, 0.80);
+    border-radius: 25px;
+     
+}
+
+.automation-header-notification:hover svg path {
+    background: rgba(130, 123, 169, 1);
+    border-radius: 25px;
+    fill: white;
+}
+
 
 .automation-header-notification-box {
     position: absolute;
@@ -177,6 +201,19 @@
     font-weight: 500;
     line-height: normal;
 }
+.automation-header-profile :hover {
+    /* border-radius: 35px; */
+    /* background: rgba(130, 123, 169, 1); */
+
+     
+}
+
+.automation-header-profile:hover svg path {
+    border-radius: 35px;
+    fill: white;
+}
+
+
 
 .automation-profile-section {
     width: 200px;
@@ -197,7 +234,14 @@
     display: flex;
     align-items: center;
 }
-
+.automation-header-profile:hover svg path {
+    fill: #fff;
+}
+.automation-header-profile:hover .automation-header-username {
+    margin-left: 8px;
+    /* box-shadow: 2px 2px 2px #000; */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
 .border-top {
     border-radius: 10px 10px 0px 0px;
 }
@@ -509,21 +553,45 @@ img.sidebar-icon {
     align-items: center;
     justify-content: center;
     width: 1258px;
-    height: 105px;
+    /* height: 105px; */
+    position: relative;
     margin-top: 16px;
-    background-image: linear-gradient(to right, #7c1989, #763298, #6f44a5, #6854b1, #6162ba, #5b69be, #5570c1, #5076c4, #4a78c4, #437ac4, #3d7cc4, #377ec3);
+    /* background-image: linear-gradient(to right, #7c1989, #763298, #6f44a5, #6854b1, #6162ba, #5b69be, #5570c1, #5076c4, #4a78c4, #437ac4, #3d7cc4, #377ec3); */
+    background-size: cover;
+    background-position: center;
     display: flex;
     padding: 23px 20px;
     align-items: center;
     gap: 380px;
     border-radius: 20px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    background-image: url('../../public/automation-icons/bg-strip.svg');
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1); */
+    background-size: cover;
+}
+.automation-box::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.automation-profile-options:hover .automation-profile-icon svg{
+    background-color: #544c82;
+    border-radius: 12px;
+
+}
+.automation-profile-options:hover .automation-profile-icon svg path {
+    fill: #fff;
+}
+.automation-profile-options:hover .automation-profile-text{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .automation-inner-box {
     display: inline-flex;
     align-items: center;
     width: 99%;
+    z-index: 99;
     height: auto;
     color: white;
 }
@@ -532,9 +600,10 @@ img.sidebar-icon {
     color: #fff;
     font-family: Roboto Serif;
     font-size: 66px;
+    margin-bottom: 0px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 75px;
 }
 
 .automation-box-icons {
@@ -950,7 +1019,7 @@ img.sidebar-icon {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    right: 251px;
+    right: 267px;
     margin-top: -28px;
     background: rgba(240, 200, 223, 0.84);
     height: auto;
@@ -985,7 +1054,7 @@ img.sidebar-icon {
     width: 190px;
     cursor: pointer;
     position: absolute;
-    right: 19px;
+    right: 35px;
     margin-top: -22px;
     z-index: 1;
 }
