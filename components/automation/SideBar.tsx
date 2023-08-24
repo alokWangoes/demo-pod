@@ -35,42 +35,80 @@ type SideBarProps = {
 
   newClass: boolean
   dropdown: number
+  select: {
+    title: string
+    content: {
+      id: number
+    }
+  }
 
-  // Dashboard: {
-  //   select: {
-  //     title: string
-  //     content: {
-  //       id: number
-  //       text: string
-  //       src: React.ReactElement<SVGAElement>
-  //       alt: string
-  //       dropdown: boolean
-  //     }[]
-  //   }[]
-  // } | string
+  sidebarData: {
+    Dashboard: {
+      title: string
+      content: {
+        id: number
+        text: string
+        src: JSX.Element
+        alt: string
+        dropdown: boolean
+      }[]
+    }
+    Automation: {
+      title: string
+      content: {
+        id: number
+        text: string
+        src: JSX.Element
+        alt: string
+        dropdown: boolean
+      }[]
+    }
+    Transaction: {
+      title: string
+      content: {
+        id: number
+        text: string
+        src: JSX.Element
+        alt: string
+        dropdown: boolean
+      }[]
+    }
+    Sales: {
+      title: string
+      content: {
+        id: number
+        text: string
+        src: JSX.Element
+        alt: string
+        dropdown: boolean
+      }[]
+    }
+    Campaigns: {
+      title: string
+      content: {
+        id: number
+        text: string
+        src: JSX.Element
+        alt: string
+        dropdown: boolean
+      }[]
+    }
+  }
 
-  // Define an interface for a sidebar section
-
-  // Define the type for your sidebarData object
+  selectedType: {
+    title: string
+    content: {
+      id: number
+      text: string
+      src: JSX.Element
+      alt: string
+      dropdown: boolean
+    }[]
+  }
 }
 
-type SidebarItem = {
-  id: number
-  text: string
-  src: React.ReactElement<SVGAElement>
-  alt: string
-  dropdown: boolean
-}
-
-type SidebarSection = {
-  title: string
-  content: SidebarItem[]
-}
-
-type SidebarData = {
-  [key: string]: SidebarSection | string
-}
-
+let checked = ""
+console.log(checked)
 const icons: SideBarProps["icons"] = [
   {
     title: "Dashboard",
@@ -104,7 +142,7 @@ const icons: SideBarProps["icons"] = [
   },
 ]
 
-const sidebarData: SidebarData = {
+const sidebarData: {[key:string]: any} = {
   Dashboard: {
     title: "Dashboard",
     content: [
@@ -274,15 +312,15 @@ const sidebarData: SidebarData = {
 
 const SideBar = () => {
   const [newClass, setNewClass] = useState<SideBarProps["newClass"]>(false)
-  const [selected, setSelected] = useState<any>()
+  const [selected, setSelected] = useState<SideBarProps["selectedType"] | null>()
   const [dropdown, setDropdown] = useState<SideBarProps["dropdown"]>(0)
 
-  const setSidebarData = (title: any) => {
-    if (selected == "") {
+  const setSidebarData = (title: string) => {
+    if (!selected) {
       setNewClass(!newClass)
       setSelected(sidebarData[title])
-    } else if (selected.title == title) {
-      setSelected("")
+    } else if (selected?.title == title) {
+      setSelected(null)
       setNewClass(!newClass)
     } else {
       setSelected(sidebarData[title])
@@ -300,7 +338,7 @@ const SideBar = () => {
             icons.map((item) => (
               <span
                 className={
-                  selected.title == item.title ? " icon active" : "icon"
+                  selected?.title == item.title ? " icon active" : "icon"
                 }
                 onClick={() => setSidebarData(item.title)}
               >
@@ -311,10 +349,10 @@ const SideBar = () => {
       </div>
       <div className={newClass ? "show" : "hide"}>
         <div className="sidebar-inner-box">
-          <h3 className="sidebar-title">{selected.title}</h3>
+          <h3 className="sidebar-title">{selected?.title}</h3>
           <div className="sidebar-values">
             {selected &&
-              selected.content.map((item : any ) => {
+              selected?.content.map((item: any) => {
                 return (
                   <>
                     <div className="sidebar-content" key={item.id}>
@@ -322,14 +360,16 @@ const SideBar = () => {
 
                       <span className="sidebar-inner-text">{item.text}</span>
                       {item.dropdown && (
-                        <img
-                          src="/automation-icons\drop-down-icon.svg"
-                          alt="dropdown-img"
-                          className="dropdown-icon"
-                          onClick={() => {
-                            dropDownManagement(item.id)
-                          }}
-                        />
+                        <>
+                          <img
+                            src="/automation-icons\drop-down-icon.svg"
+                            alt="dropdown-img"
+                            className="dropdown-icon"
+                            onClick={() => {
+                              dropDownManagement(item.id)
+                            }}
+                          />
+                        </>
                       )}
                     </div>
 

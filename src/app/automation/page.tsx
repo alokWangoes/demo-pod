@@ -1,11 +1,10 @@
 import AutomationPage from "../../../components/automation/AutomationPage"
 
-const Automation = () => {
+  const  Automation = () => {
     return (
-        <div>
-            <AutomationPage/>
-        </div>
+        <AutomationPage/>
     )
 }
 
-export default Automation; 
+
+export default Automation
