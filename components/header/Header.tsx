@@ -13,7 +13,7 @@ type HeaderProps = {
     src: string
     alt: string
   }[]
-  isNav: {isNav : any }
+  isNav: {isNav: boolean}
 }
 
 const languageImages: HeaderProps["languageImage"] = {
