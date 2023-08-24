@@ -314,7 +314,7 @@ const SideBar = () => {
           <h3 className="sidebar-title">{selected.title}</h3>
           <div className="sidebar-values">
             {selected &&
-              selected.content.map((item : any) => {
+              selected.content.map((item : any ) => {
                 return (
                   <>
                     <div className="sidebar-content" key={item.id}>

@@ -73,7 +73,7 @@ const FooterBox = () => {
                 </div>
                 <div className="footer-icons">
                   {iconsData &&
-                    iconsData.map((item) => {
+                    iconsData.map((item : any ) => {
                       return (
                         <span>
                           <img
@@ -97,13 +97,13 @@ const FooterBox = () => {
             <div className="footer-link">
               <ul className="footer-links-1">
                 {footerLink1 &&
-                  footerLink1.map((item) => {
+                  footerLink1.map((item : any ) => {
                     return <li>{item}</li>
                   })}
               </ul>
               <ul className="footer-links-2">
                 {footerLink2 &&
-                  footerLink2.map((item) => {
+                  footerLink2.map((item : any ) => {
                     return <li>{item}</li>
                   })}
               </ul>

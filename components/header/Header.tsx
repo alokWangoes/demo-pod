@@ -59,7 +59,7 @@ const Header = ({ isNav }:HeaderProps["isNav"]) => {
             <div className="top-wrp">
               <div className="social-icons">
                 {iconsData &&
-                  iconsData.map((item) => {
+                  iconsData.map((item : any ) => {
                     return <img src={item.src} alt={item.alt} />
                   })}
               </div>

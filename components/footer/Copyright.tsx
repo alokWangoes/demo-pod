@@ -42,7 +42,7 @@ const Copyright = () => {
             {currentYear} PODfusion. All rights preserved.
           </span>
           {Links &&
-            Links.map((item) => {
+            Links.map((item : any ) => {
               return (
                 <Link href={item.href}>
                   <span className={item.className}>{item.title}</span>

@@ -65,7 +65,7 @@ const MainSection = () => {
         </div>
         <div className="row">
           {featureData &&
-            featureData.map((item) => {
+            featureData.map((item : any ) => {
               return (
                 <div className="col-md-4 col-xl-4 col-sm-12">
                   <div className="block-section">
@@ -82,7 +82,7 @@ const MainSection = () => {
 
         <div className="row py-5">
           {featureData2 &&
-            featureData2.map((item) => {
+            featureData2.map((item : any ) => {
               return (
                 <div className="col-md-4 col-xl-4 col-sm-12">
                   <div className="block-section">
