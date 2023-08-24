@@ -13,7 +13,7 @@ type HeaderProps = {
     src: string
     alt: string
   }[]
-  isNav: boolean
+  isNav: {isNav : any }
 }
 
 const languageImages: HeaderProps["languageImage"] = {
@@ -37,7 +37,7 @@ const iconsData: HeaderProps["icon"] = [
     alt: "twitter-icon",
   },
 ]
-const Header = ({ isNav }: any) => {
+const Header = ({ isNav }:HeaderProps["isNav"]) => {
   const [open, setOpen] = useState<HeaderProps["open"]>(false)
   const [language, setLanguage] = useState<HeaderProps["language"]>("EN")
 
