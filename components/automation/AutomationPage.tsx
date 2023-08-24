@@ -415,7 +415,6 @@ const AutomationPage = () => {
                       className="search-icon"
                       onClick={handleSubmit(sendEmail)}
                     />
-                    {/* <img className="search-icon" src="/searchIcon.svg" alt="" /> */}
                   </span>
                 </form>
               </div>

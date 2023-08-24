@@ -72,6 +72,7 @@
     border-bottom: 2px solid rgba(255, 128, 166, 0.30);
     border-radius: 10px;
     background: rgba(75, 63, 146, 0.80);
+    z-index: 1;
 }
 
 .notification-title {
@@ -594,6 +595,7 @@ img.sidebar-icon {
     z-index: 99;
     height: auto;
     color: white;
+    z-index: 0;
 }
 
 .automation-inner-text {
