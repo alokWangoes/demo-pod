@@ -877,12 +877,7 @@ img.sidebar-icon {
 .Workflow-content-inner-right {
     display: inline-flex;
     position: relative;
-    /* align-items: flex-end; */
-    /* margin-top: 25px; */
-    /* padding-right: 35px; */
-    /* align-content: space-between; */
     flex-direction: column;
-    /* justify-content: flex-end; */
 }
 
 .text-md-right {

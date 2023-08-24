@@ -18,24 +18,60 @@ import MeetingsIcon from "../../public/automation-icons/Meetings.svg"
 import BatchIcon from "../../public/automation-icons/Batch Transactions.svg"
 import AnalyticIcon from "../../public/automation-icons/Sales Analytics.svg"
 
-type Interface = {
+type SideBarProps = {
   icons: {
     title: string
     className: string
-    src: any
+    src: React.ReactElement<SVGAElement>
     alt: string
   }[]
   sideBarContent: {
     id: number
     text: string
-    src: string
+    src: React.ReactElement<SVGAElement>
     alt: string
     dropdown: boolean
   }[]
+
+  newClass: boolean
+  dropdown: number
+
+  // Dashboard: {
+  //   select: {
+  //     title: string
+  //     content: {
+  //       id: number
+  //       text: string
+  //       src: React.ReactElement<SVGAElement>
+  //       alt: string
+  //       dropdown: boolean
+  //     }[]
+  //   }[]
+  // } | string
+
+  // Define an interface for a sidebar section
+
+  // Define the type for your sidebarData object
 }
-let checked = ""
-console.log(checked)
-const icons: Interface["icons"] = [
+
+type SidebarItem = {
+  id: number
+  text: string
+  src: React.ReactElement<SVGAElement>
+  alt: string
+  dropdown: boolean
+}
+
+type SidebarSection = {
+  title: string
+  content: SidebarItem[]
+}
+
+type SidebarData = {
+  [key: string]: SidebarSection | string
+}
+
+const icons: SideBarProps["icons"] = [
   {
     title: "Dashboard",
     className: "icon",
@@ -68,9 +104,7 @@ const icons: Interface["icons"] = [
   },
 ]
 
-
-
-const sidebarData = {
+const sidebarData: SidebarData = {
   Dashboard: {
     title: "Dashboard",
     content: [
@@ -84,21 +118,21 @@ const sidebarData = {
       {
         id: 2,
         text: "Integration",
-        src: <IntegratedIcon/>,
+        src: <IntegratedIcon />,
         alt: "integration-icon",
         dropdown: false,
       },
       {
         id: 3,
         text: "Data",
-        src: <ActionIcon/>,
+        src: <ActionIcon />,
         alt: "data-icon",
         dropdown: true,
       },
       {
         id: 4,
         text: "Work",
-        src: <WorkIcon/>,
+        src: <WorkIcon />,
         alt: "work-icon",
         dropdown: false,
       },
@@ -110,28 +144,28 @@ const sidebarData = {
       {
         id: 1,
         text: "Workflow",
-        src: <WorkIcon/>,
+        src: <WorkIcon />,
         alt: "workflow-icon",
         dropdown: false,
       },
       {
         id: 2,
         text: "Action",
-        src: <ActionIcon/>,
+        src: <ActionIcon />,
         alt: "action-icon",
         dropdown: false,
       },
       {
         id: 3,
         text: "Settings",
-        src: <SettingsIcon/>,
+        src: <SettingsIcon />,
         alt: "settings-icon",
         dropdown: true,
       },
       {
         id: 4,
         text: "Monitoring",
-        src: <MonitoringIcon/>,
+        src: <MonitoringIcon />,
         alt: "monitoring-icon",
         dropdown: false,
       },
@@ -143,28 +177,28 @@ const sidebarData = {
       {
         id: 1,
         text: "Analytics",
-        src: <ProjectIcon/>,
+        src: <ProjectIcon />,
         alt: "dashboard-icon",
         dropdown: true,
       },
       {
         id: 2,
         text: "Peroformance Insights",
-        src: <IntegratedIcon/>,
+        src: <IntegratedIcon />,
         alt: "integration-icon",
         dropdown: false,
       },
       {
         id: 3,
         text: "Collaboration",
-        src: <TransactionsIcon/>,
+        src: <TransactionsIcon />,
         alt: "dashboard-icon",
         dropdown: true,
       },
       {
         id: 4,
         text: "Work",
-        src: <WorkIcon/>,
+        src: <WorkIcon />,
         alt: "work-icon",
         dropdown: true,
       },
@@ -176,28 +210,28 @@ const sidebarData = {
       {
         id: 1,
         text: "Reports",
-        src: <IntegratedIcon/>,
+        src: <IntegratedIcon />,
         alt: "report-icon",
         dropdown: false,
       },
       {
         id: 2,
         text: "Categories",
-        src: <CategoryIcon/>,
+        src: <CategoryIcon />,
         alt: "categories-icon",
         dropdown: false,
       },
       {
         id: 3,
         text: "Batch Transactions",
-        src: <BatchIcon/>,
+        src: <BatchIcon />,
         alt: "batch-transaction-icon",
         dropdown: true,
       },
       {
         id: 4,
         text: "Meetings",
-        src: <MeetingsIcon/>,
+        src: <MeetingsIcon />,
         alt: "meetings-icon",
         dropdown: true,
       },
@@ -209,28 +243,28 @@ const sidebarData = {
       {
         id: 1,
         text: "Pipeline Management",
-        src: <ActionIcon/>,
+        src: <ActionIcon />,
         alt: "pipeline-management-icon",
         dropdown: false,
       },
       {
         id: 2,
         text: "Sales Analytics",
-        src: <AnalyticIcon/>,
+        src: <AnalyticIcon />,
         alt: "sales-analytics-icon",
         dropdown: true,
       },
       {
         id: 3,
         text: "Sales Collab",
-        src: <BatchIcon/>,
+        src: <BatchIcon />,
         alt: "dashboard-icon",
         dropdown: true,
       },
       {
         id: 4,
         text: "Sales Monitoring",
-        src: <WorkIcon/>,
+        src: <WorkIcon />,
         alt: "sales-monitoring-icon",
         dropdown: false,
       },
@@ -239,15 +273,14 @@ const sidebarData = {
 }
 
 const SideBar = () => {
-  const [newClass, setNewClass] = useState(false)
-  const [selected, setSelected] = useState("")
-  const [dropdown, setDropdown] = useState(0)
+  const [newClass, setNewClass] = useState<SideBarProps["newClass"]>(false)
+  const [selected, setSelected] = useState<any>()
+  const [dropdown, setDropdown] = useState<SideBarProps["dropdown"]>(0)
 
   const setSidebarData = (title: any) => {
     if (selected == "") {
       setNewClass(!newClass)
       setSelected(sidebarData[title])
-      checked = sidebarData[title]
     } else if (selected.title == title) {
       setSelected("")
       setNewClass(!newClass)
@@ -281,25 +314,22 @@ const SideBar = () => {
           <h3 className="sidebar-title">{selected.title}</h3>
           <div className="sidebar-values">
             {selected &&
-              selected.content.map((item) => {
+              selected.content.map((item : any) => {
                 return (
                   <>
                     <div className="sidebar-content" key={item.id}>
-                     
-                    {item.src}
-                     
+                      {item.src}
+
                       <span className="sidebar-inner-text">{item.text}</span>
                       {item.dropdown && (
-                        <>
-                          <img
-                            src="/automation-icons\drop-down-icon.svg"
-                            alt="dropdown-img"
-                            className="dropdown-icon"
-                            onClick={() => {
-                              dropDownManagement(item.id)
-                            }}
-                          />
-                        </>
+                        <img
+                          src="/automation-icons\drop-down-icon.svg"
+                          alt="dropdown-img"
+                          className="dropdown-icon"
+                          onClick={() => {
+                            dropDownManagement(item.id)
+                          }}
+                        />
                       )}
                     </div>
 
@@ -307,11 +337,10 @@ const SideBar = () => {
                       <div className="sidebar-dropdown-box">
                         <LineIcon />
                         <div className="sidebar-dropdown-data">
-                        <span>Logs</span>
-                        <span>Settings</span>
-                        <span>Lorem</span>
+                          <span>Logs</span>
+                          <span>Settings</span>
+                          <span>Lorem</span>
                         </div>
-                       
                       </div>
                     )}
                   </>
