@@ -27,6 +27,7 @@ import MyProfileIcon from "../../public/automation-icons/my-profile-Icon.svg"
 import MySubscriptionIcon from "../../public/automation-icons/my-subscription-icon.svg"
 import MySettingIcon from "../../public/automation-icons/my-settings-icon.svg"
 import SearchIcon from "../../public/searchicon.svg"
+import ShowMoreIcon from "../../public/automation-icons/show-more-icon.svg"
 
 import { newsLetterSchema } from "./validator"
 type AutomationPageProps = {
@@ -418,12 +419,12 @@ const AutomationPage = () => {
                   </span>
                 </form>
               </div>
-              {errors.search?.message}
+              <p className="error-msg">{errors.search?.message}</p>
             </div>
           </div>
           <div className="automation-box">
             <div className="automation-inner-box">
-              <h3 className="automation-inner-text roboto">Automation</h3>
+              <h3 className="automation-inner-text roboto">Automations</h3>
               <div className="automation-box-icons">
                 {automationBoxData &&
                   automationBoxData.map((item: any) => {
@@ -439,7 +440,7 @@ const AutomationPage = () => {
               </div>
             </div>
           </div>
-          <div className="create-workflow ">
+          <div className="create-workflow">
             <button className="create-workflow-btn">Create workflow</button>
             <div className="create-workflow-filters">
               <div
@@ -562,6 +563,12 @@ const AutomationPage = () => {
                 </div>
               )
             })}
+          <div className="show-more row">
+            <div className="col-sm-12 col-md-12 col-lg-12 show-more-content">
+              <ShowMoreIcon />
+              <p>Show more</p>
+            </div>
+          </div>
         </div>
       </div>
       <FooterBox />
