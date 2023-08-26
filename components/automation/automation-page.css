@@ -455,20 +455,20 @@ img.sidebar-icon {
 
 .sidebar-content:hover .sidebar-inner-text,
 .sidebar-content:hover .sidebar-content svg path {
-    color: #3D318A;
+    color: #5c5588;
 }
 
 .automaton-box-icon-wrp:hover svg g {
-    fill: #3D318A;
+    fill: #5c5588;
 }
 
 .automaton-box-icon-wrp:hover svg path {
-    fill: #3D318A;
+    fill: #5c5588;
 }
 
 
 .automaton-box-icon-wrp:hover .automation-box-icons-text {
-    color: #3D318A;
+    color: #5c5588;
     text-decoration: underline;
     text-decoration-color: white;
 }
@@ -1031,8 +1031,8 @@ img.sidebar-icon {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    right: 250px;
-    margin-top: -28px;
+    right: 267px;	
+    margin-top: -29px;
     background: rgba(240, 200, 223, 0.84);
     height: auto;
     width: 30px;
@@ -1068,7 +1068,7 @@ img.sidebar-icon {
     width: 179px;
     cursor: pointer;
     position: absolute;
-    right: 28px;
+    right: 42px;
     margin-top: -22px;
     z-index: 1;
 }
@@ -1082,13 +1082,12 @@ img.sidebar-icon {
     line-height: normal;
     height: 50px;
     padding-left: 10px;
-    border-bottom: 1px solid white;
     display: flex;
     align-items: center;
 }
 
 .workflow_order_option:hover {
-    background-color: #a884be;
+    background-color: #b958cfba;
 }
 
 

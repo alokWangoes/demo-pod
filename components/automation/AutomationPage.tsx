@@ -3,6 +3,7 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import "./automation-page.css"
+import Copyright from "../footer/Copyright"
 import FooterBox from "../footer/FooterBox"
 import Header from "../header/Header"
 import SideBar from "./SideBar"
@@ -572,6 +573,7 @@ const AutomationPage = () => {
         </div>
       </div>
       <FooterBox />
+      <Copyright />
     </div>
   )
 }
