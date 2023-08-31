@@ -79,7 +79,7 @@ const WhatYouGet = () => {
                 nisl a non imperdiet. Fames aenean cursus at netus.
               </h2>
               <div className="d-flex justify-content-center">
-                <Button>
+                <Button size='medium'>
                   <h3 className="aclonica text-uppercase white-color m-0">
                     Subscribe
                   </h3>
