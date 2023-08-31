@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Chela+One&family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto+Flex:opsz,wght@8..144,600&family=Roboto+Serif:opsz@8..144&family=ZCOOL+XiaoWei&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3d318a;
+  --white: #fff;
+  --blue: #1e90ff;
+  --liberty: #61569f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #e0cbde !important;
+}
+
+.roboto {
+  font-family: "Roboto Flex";
+}
+
+.aclonica {
+  font-family: "Aclonica";
+}
+
+.roboto-serif {
+  font-family: "Roboto Serif", serif;
+}
+
+.z-cool {
+  font-family: "ZCOOL XiaoWei", sans-serif;
+}
+.chela-one {
+  font-family: "Chela One", cursive;
+}
+.baskerville {
+  font-family: "Libre Baskerville", serif;
+}
+
+.text-primary {
+  --bs-text-opacity: 1;
+  color: rgba(61, 49, 138, 1) !important ;
+}
+
+.primary-color {
+  color: var(--primary);
+}
+.white-color {
+  color: var(--white);
+}
+.liberty-color {
+  color: var(--liberty);
+}

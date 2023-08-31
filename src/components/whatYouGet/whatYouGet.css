@@ -1,0 +1,25 @@
+.what-you-get-bg {
+  background-image: url("/middle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.subscribe-section-bg {
+  background: linear-gradient(270deg, #d598ee, #96b6ffe5);
+  background: -moz-linear-gradient(270deg, #d598ee, #96b6ffe5);
+  background: -webkit-linear-gradient(270deg, #d598ee, #96b6ffe5);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#d598ee", endColorstr="#FFFFFF", GradientType=1 );
+  border-radius: 250px;
+  padding: 6px 18px;
+}
+.subscribe-section {
+  background: url("/vector/Vector 2.svg"),
+    linear-gradient(270deg, #eac0cd, #ffeef2);
+  background: url("/vector/Vector 2.svg"),
+    -moz-linear-gradient(270deg, #eac0cd, #ffeef2);
+  background: url("/vector/Vector 2.svg"),
+    -webkit-linear-gradient(270deg, #eac0cd, #ffeef2);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EAC0CD", endColorstr="#FFFFFF", GradientType=1 );
+
+  border-radius: 250px;
+}

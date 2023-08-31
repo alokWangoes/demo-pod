@@ -1,0 +1,86 @@
+.top-wrp {
+  background: linear-gradient(
+    to right,
+    rgba(250, 210, 225, 1),
+    rgba(220, 180, 245, 1)
+  );
+  border-radius: 10px;
+}
+.setting-dropdown {
+  position: absolute;
+  top: 23px;
+  right: 0px;
+  width: 90px;
+  padding: 5px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+}
+.en {
+  color: #fff;
+  font-weight: 300;
+}
+.languages-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.button-primary {
+  font-family: "Aclonica", sans-serif !important;
+  color: #3d318a;
+  font-size: 21px;
+  font-weight: 600;
+  border-bottom: 1px solid #3d318a;
+}
+
+.button {
+  padding: 15px 50px;
+  border-radius: 13px;
+  font-weight: 700;
+  font-size: 21px;
+  color: #fff;
+  font-family: "Aclonica" !important;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.4) 100%
+    ),
+    linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 0, 31, 0.15) 100%
+    ),
+    linear-gradient(
+      231deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 0, 184, 0.15) 100%
+    ),
+    linear-gradient(
+      136deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(143, 0, 255, 0.15) 100%
+    ),
+    linear-gradient(
+      127deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(36, 0, 255, 0.15) 100%
+    ),
+    linear-gradient(
+      216deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 255, 163, 0.15) 100%
+    ),
+    linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(250, 255, 0, 0.15) 100%
+    ),
+    linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 122, 0, 0.15) 100%
+    ),
+    rgba(255, 0, 77, 0.6);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5),
+    1px 1px 2px 0px rgba(0, 0, 0, 0.48);
+}

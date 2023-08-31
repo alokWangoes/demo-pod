@@ -1,0 +1,18 @@
+.nav-list li a {
+  color: #3d318a;
+  font-family: ZCOOL XiaoWei;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.nav-list li a:hover {
+  text-decoration: underline #a884be;
+  color: #a884be;
+}
+.nav-list li {
+  list-style-type: none;
+  display: inline-flex;
+}

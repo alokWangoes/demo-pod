@@ -1,0 +1,21 @@
+.button-type-1 {
+  background: linear-gradient(-90deg, #8981b8, #ad7fb1cc);
+  background: -moz-linear-gradient(-90deg, #8981b8, #ad7fb1cc);
+  background: -webkit-linear-gradient(-90deg, #8981b8, #ad7fb1cc);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#8981B8", endColorstr="#c5c1dc", GradientType=1 );
+
+  min-width: auto;
+  border-radius: 15px;
+  padding: 20px 80px;
+}
+
+.button-type-1-sm {
+  background: linear-gradient(-90deg, #8981b8, #ad7fb1cc);
+  background: -moz-linear-gradient(-90deg, #8981b8, #ad7fb1cc);
+  background: -webkit-linear-gradient(-90deg, #8981b8, #ad7fb1cc);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#8981B8", endColorstr="#c5c1dc", GradientType=1 );
+
+  min-width: auto;
+  border-radius: 25px;
+  padding: 15px 48px;
+}

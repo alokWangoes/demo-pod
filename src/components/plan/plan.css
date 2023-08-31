@@ -1,0 +1,6 @@
+.pricingTable {
+  border-radius: 130px;
+  background: url("/vector/Vector 4.svg"),
+    linear-gradient(2deg, rgba(30, 30, 30, 0.4) 2.85%, #3d318a 9.12%, #fff 100%);
+  background-repeat: repeat;
+}
